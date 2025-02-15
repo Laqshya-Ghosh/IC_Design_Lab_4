@@ -1,0 +1,48 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sat Feb 15 18:41:34 2025
+| Host         : Siddharth-Acer running 64-bit major release  (build 9200)
+| Command      : report_timing
+| Design       : top_lander_fisher_bit
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 Cin
+                            (input port)
+  Destination:            S[29]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        17.744ns  (logic 3.719ns (20.960%)  route 14.025ns (79.040%))
+  Logic Levels:           6  (IBUF=1 LUT3=1 LUT6=3 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U2                                                0.000     0.000 r  Cin (IN)
+                         net (fo=0)                   0.000     0.000    Cin
+    U2                   IBUF (Prop_ibuf_I_O)         0.930     0.930 r  Cin_IBUF_inst/O
+                         net (fo=4, routed)           4.025     4.955    Cin_IBUF
+    SLICE_X0Y118         LUT3 (Prop_lut3_I0_O)        0.105     5.060 r  S_OBUF[3]_inst_i_2/O
+                         net (fo=3, routed)           0.520     5.580    stage1G_1
+    SLICE_X0Y119         LUT6 (Prop_lut6_I4_O)        0.105     5.685 r  S_OBUF[31]_inst_i_8/O
+                         net (fo=1, routed)           0.676     6.361    net1__2
+    SLICE_X1Y125         LUT6 (Prop_lut6_I3_O)        0.105     6.466 r  S_OBUF[31]_inst_i_3/O
+                         net (fo=17, routed)          7.313    13.780    stage4G_15
+    SLICE_X163Y142       LUT6 (Prop_lut6_I3_O)        0.105    13.885 r  S_OBUF[29]_inst_i_1/O
+                         net (fo=1, routed)           1.490    15.375    S_OBUF[29]
+    M4                   OBUF (Prop_obuf_I_O)         2.369    17.744 r  S_OBUF[29]_inst/O
+                         net (fo=0)                   0.000    17.744    S[29]
+    M4                                                                r  S[29] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

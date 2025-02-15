@@ -1,0 +1,42 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sat Feb 15 18:46:36 2025
+| Host         : Siddharth-Acer running 64-bit major release  (build 9200)
+| Command      : report_timing
+| Design       : top_mealy
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 d_in
+                            (input port)
+  Destination:            detected
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.865ns  (logic 3.343ns (56.999%)  route 2.522ns (43.001%))
+  Logic Levels:           3  (IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R18                                               0.000     0.000 r  d_in (IN)
+                         net (fo=0)                   0.000     0.000    d_in
+    R18                  IBUF (Prop_ibuf_I_O)         0.852     0.852 r  d_in_IBUF_inst/O
+                         net (fo=7, routed)           1.146     1.998    d_in_IBUF
+    SLICE_X0Y101         LUT3 (Prop_lut3_I1_O)        0.105     2.103 r  detected_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.376     3.479    detected_OBUF
+    T23                  OBUF (Prop_obuf_I_O)         2.385     5.865 r  detected_OBUF_inst/O
+                         net (fo=0)                   0.000     5.865    detected
+    T23                                                               r  detected (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

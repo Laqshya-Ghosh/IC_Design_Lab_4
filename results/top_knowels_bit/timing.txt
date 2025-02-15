@@ -1,0 +1,48 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sat Feb 15 18:36:43 2025
+| Host         : Siddharth-Acer running 64-bit major release  (build 9200)
+| Command      : report_timing
+| Design       : top_knowles_bit
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 A[20]
+                            (input port)
+  Destination:            S[31]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        16.845ns  (logic 4.213ns (25.009%)  route 12.632ns (74.991%))
+  Logic Levels:           6  (IBUF=1 LUT3=1 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T8                                                0.000     0.000 f  A[20] (IN)
+                         net (fo=0)                   0.000     0.000    A[20]
+    T8                   IBUF (Prop_ibuf_I_O)         0.881     0.881 f  A_IBUF[20]_inst/O
+                         net (fo=9, routed)           5.297     6.178    A_IBUF[20]
+    SLICE_X41Y131        LUT4 (Prop_lut4_I3_O)        0.124     6.302 r  S_OBUF[31]_inst_i_23/O
+                         net (fo=1, routed)           0.685     6.987    S_OBUF[31]_inst_i_23_n_0
+    SLICE_X41Y131        LUT5 (Prop_lut5_I0_O)        0.277     7.264 r  S_OBUF[31]_inst_i_8/O
+                         net (fo=2, routed)           0.673     7.937    S_OBUF[31]_inst_i_8_n_0
+    SLICE_X41Y130        LUT3 (Prop_lut3_I0_O)        0.289     8.226 r  S_OBUF[31]_inst_i_2/O
+                         net (fo=2, routed)           0.859     9.085    S_OBUF[31]_inst_i_2_n_0
+    SLICE_X43Y131        LUT6 (Prop_lut6_I0_O)        0.275     9.360 r  S_OBUF[31]_inst_i_1/O
+                         net (fo=1, routed)           5.118    14.478    S_OBUF[31]
+    M7                   OBUF (Prop_obuf_I_O)         2.367    16.845 r  S_OBUF[31]_inst/O
+                         net (fo=0)                   0.000    16.845    S[31]
+    M7                                                                r  S[31] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

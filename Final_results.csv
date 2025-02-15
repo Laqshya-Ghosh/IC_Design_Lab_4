@@ -1,0 +1,4 @@
+,adder_1bit,MUX,top_alubit,top_knowels_bit,top_koggestone_bit,top_lander_fisher_bit,top_master_slave,top_mealy,top_moore,top_ripplebit
+Power,1.034,25.054,11.058,25.054,25.067,23.799,0.639,0.657,0.525,0.122
+Delay,5.896,16.845,13.869,16.845,17.385,17.744,4.767,5.865,4.81,
+LUTs,1.0,133.0,131.0,133.0,131.0,73.0,1.0,5.0,3.0,0.0
